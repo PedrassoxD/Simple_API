@@ -36,7 +36,7 @@
                 <div id="list-teams" v-if="teamsFilter && teamsFilter.length">
                     <div class="row justify-content-center">
                         <div class="col-auto">
-                            <table class="mt-5 table table-striped table-inverse table-responsive table-center table-bordered text-center" style="background-color:white;" v-for="team of teamsFilter">
+                            <table class="mt-5 table table-striped table-inverse table-responsive table-center table-bordered text-center" style="background-color:white;">
                                 <thead class="thead-inverse">
                                     <tr>
                                         <th>ID Jugador</th>
@@ -46,7 +46,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr v-for="team of teamsFilter">
                                         <td scope="row">{{team.team.id}}</td>
                                         <td>{{team.first_name}}</td>
                                         <td>{{team.last_name}}</td>
